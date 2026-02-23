@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Foodtruck – Streetfood & Catering. Standorte, Menü, Anfrage." />
+  <title>FOODTRUCK NAME – Streetfood & Catering</title>
+
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --card:#111521;
+      --text:#e8ecf6;
+      --muted:#a7b0c3;
+      --line:rgba(255,255,255,.10);
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+      --max: 980px;
+      --pad: clamp(16px, 3vw, 28px);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 15% 5%, rgba(167,139,250,.20), transparent 60%),
+        radial-gradient(900px 500px at 85% 10%, rgba(125,211,252,.20), transparent 55%),
+        linear-gradient(180deg, #070812, #0b0d12 40%, #070812);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px var(--pad) 56px;}
+    header{
+      display:flex; gap:12px; align-items:center; justify-content:space-between;
+      padding:14px 0 18px;
+    }
+    .brand{
+      display:flex; gap:12px; align-items:center; text-decoration:none;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: var(--shadow);
+    }
+    .brand strong{display:block; letter-spacing:.5px}
+    .brand span{display:block; font-size:13px; color:var(--muted); margin-top:2px}
+    nav{
+      display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;
+      font-size:14px; color:var(--muted);
+    }
+    nav a{ text-decoration:none; padding:6px 10px; border-radius:10px; }
+    nav a:hover{ background:rgba(255,255,255,.06); color:var(--text); }
+
+    .hero{
+      margin-top:10px;
+      background: rgba(17,21,33,.75);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(22px, 4vw, 38px);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-60px -60px auto auto;
+      width:240px; height:240px;
+      background: radial-gradient(circle at 30% 30%, rgba(125,211,252,.25), transparent 60%);
+      filter: blur(2px);
+      transform: rotate(18deg);
+    }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(26px, 4.2vw, 44px);
+      line-height:1.12;
+      letter-spacing:.2px;
+    }
+    .lead{margin:0 0 18px; color:var(--muted); font-size: clamp(15px, 1.8vw, 18px);}
+    .cta{
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+      margin-top:10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#061018;
+      box-shadow: var(--shadow);
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .meta{
+      display:flex; gap:14px; flex-wrap:wrap;
+      margin-top:14px; color:var(--muted); font-size:14px;
+    }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px; border-radius:999px; border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    .card{
+      grid-column: span 12;
+      background: rgba(17,21,33,.65);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.22);
+    }
+    .card h2{margin:0 0 8px; font-size:18px}
+    .card p{margin:0; color:var(--muted)}
+    .list{margin:10px 0 0; padding:0; list-style:none; color:var(--muted)}
+    .list li{padding:8px 0; border-top:1px dashed rgba(255,255,255,.10)}
+    .list li:first-child{border-top:none}
+    .two{grid-column: span 12}
+    @media (min-width: 860px){
+      .two{grid-column: span 6}
+      .third{grid-column: span 4}
+    }
+    .small{
+      font-size:13px; color:var(--muted);
+    }
+    footer{
+      margin-top:18px;
+      padding-top:18px;
+      border-top: 1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:space-between;
+    }
+    .footer-links{display:flex; gap:12px; flex-wrap:wrap}
+    .footer-links a{color:var(--muted); text-decoration:none}
+    .footer-links a:hover{color:var(--text)}
+    .notice{
+      margin-top:10px;
+      font-size:12px;
+      color:rgba(167,176,195,.85);
+    }
+    /* Simple anchor offset for sticky header feel */
+    section{scroll-margin-top:18px}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="Start">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>FOODTRUCK NAME</strong>
+          <span>Streetfood • Catering • Region</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navigation">
+        <a href="#standorte">Standorte</a>
+        <a href="#menu">Menü</a>
+        <a href="#catering">Catering</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <h1>Signature Streetfood.<br/>Für hungrige Menschen & gute Events.</h1>
+        <p class="lead">
+          Frisch zubereitet, klarer Fokus auf Qualität – verfügbar an wechselnden Standorten
+          und für private & Firmen-Events buchbar.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#kontakt">Catering anfragen</a>
+          <a class="btn" href="#standorte">Heutige Standorte</a>
+        </div>
+
+        <div class="meta" aria-label="Kurzinfos">
+          <span class="pill">📍 Raum: <strong style="color:var(--text)">Freiburg / Emmendingen</strong></span>
+          <span class="pill">🕒 Zeiten: <strong style="color:var(--text)">siehe Instagram / Updates</strong></span>
+          <span class="pill">💳 Zahlung: <strong style="color:var(--text)">bar • Karte • ggf. online</strong></span>
+        </div>
+
+        <p class="notice">Hinweis: Inhalte sind vorläufig – Menü/Standorte werden laufend aktualisiert.</p>
+      </section>
+
+      <div class="grid">
+        <section class="card third" id="standorte">
+          <h2>Standorte</h2>
+          <p>Aktuelle Spots & Zeiten veröffentliche ich hier:</p>
+          <ul class="list">
+            <li>Instagram: <a href="https://instagram.com/DEIN_HANDLE" target="_blank" rel="noopener">instagram.com/DEIN_HANDLE</a></li>
+            <li>Optional: WhatsApp Kanal / Newsletter</li>
+            <li>Oder: Google Maps Link</li>
+          </ul>
+          <p class="small" style="margin-top:10px;">Tipp: Ein fester Link (Instagram/Google) reicht am Anfang völlig.</p>
+        </section>
+
+        <section class="card third" id="menu">
+          <h2>Menü (Auszug)</h2>
+          <ul class="list">
+            <li><strong>Signature Chicken</strong> – knusprig, saftig, hausgemachte Sauce</li>
+            <li><strong>Loaded Fries</strong> – Topping + Sauce (je nach Event)</li>
+            <li><strong>Veggie Option</strong> – auf Anfrage / tagesabhängig</li>
+          </ul>
+          <p class="small" style="margin-top:10px;">Preise: „ab X €“ oder „je nach Event“ ist okay, bis alles final ist.</p>
+        </section>
+
+        <section class="card third">
+          <h2>Warum wir</h2>
+          <ul class="list">
+            <li>Fokus auf Geschmack & Konsistenz</li>
+            <li>Saubere Abläufe (Hygiene, Planung)</li>
+            <li>Schneller Service auf Events</li>
+          </ul>
+        </section>
+
+        <section class="card two" id="catering">
+          <h2>Catering / Events</h2>
+          <p>
+            Buchbar für Firmenfeiern, Geburtstage, Vereins-Events und Festivals.
+            Schreib kurz: Datum, Ort, Personenzahl, Zeitfenster – ich melde mich mit einem Angebot.
+          </p>
+          <ul class="list">
+            <li><strong>Kapazität:</strong> z.B. 50–300 Portionen (anpassen)</li>
+            <li><strong>Region:</strong> z.B. bis 60 km Umkreis (anpassen)</li>
+            <li><strong>Optionen:</strong> vegetarisch / scharf / mild (anpassen)</li>
+          </ul>
+        </section>
+
+        <section class="card two" id="kontakt">
+          <h2>Kontakt</h2>
+          <p>
+            <strong>E-Mail:</strong> <a href="mailto:info@DEINE-DOMAIN.de">info@DEINE-DOMAIN.de</a><br/>
+            <strong>Telefon/WhatsApp:</strong> <a href="tel:+49XXXXXXXXXX">+49 …</a><br/>
+            <strong>Instagram:</strong> <a href="https://instagram.com/DEIN_HANDLE" target="_blank" rel="noopener">@DEIN_HANDLE</a>
+          </p>
+          <p class="small" style="margin-top:10px;">
+            Wenn du WhatsApp Business nutzt: pack hier einen Click-to-Chat Link rein.
+          </p>
+        </section>
+
+        <section class="card" id="impressum">
+          <h2>Impressum</h2>
+          <p class="small">
+            <strong>Angaben gemäß § 5 TMG</strong><br/>
+            NAME / FIRMA<br/>
+            Anschrift<br/>
+            E-Mail: info@DEINE-DOMAIN.de<br/>
+            Telefon: +49 …<br/><br/>
+            <strong>USt-IdNr.:</strong> (falls vorhanden)<br/>
+            <strong>Verantwortlich i.S.d. § 18 Abs. 2 MStV:</strong> NAME, Anschrift
+          </p>
+        </section>
+
+        <section class="card" id="datenschutz">
+          <h2>Datenschutzerklärung (Kurz)</h2>
+          <p class="small">
+            Diese Website verarbeitet keine personenbezogenen Daten außer denen, die du freiwillig per E-Mail/Telefon sendest.
+            Server-Logfiles (IP-Adresse, Zeitpunkt, Browser) können technisch bedingt anfallen.
+            Wenn du externe Dienste nutzt (z.B. Instagram-Link, Google Maps, Analytics), muss das hier ergänzt werden.
+          </p>
+          <p class="small" style="margin-top:10px;">
+            Tipp: Solange du <strong>keine Cookies/Tracking</strong> und <strong>kein eingebettetes</strong> Instagram/Maps nutzt,
+            ist es deutlich einfacher.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div>© <span id="y"></span> FOODTRUCK NAME</div>
+      <div class="footer-links">
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
