@@ -1,153 +1,98 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snackungswagen – Projekt im Aufbau</title>
-<meta name="description" content="Snackungswagen – Streetfood Projekt im Aufbau. Kooperationen, Lieferanten & Eventanfragen willkommen.">
-
-<style>
-:root{
-  --bg:#f6f7f9;
-  --card:#ffffff;
-  --text:#1e1f23;
-  --muted:#6b7280;
-  --line:#e5e7eb;
-  --accent:#111827;
-  --radius:14px;
-  --max:820px;
-}
-
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-
-.wrapper{
-  max-width:var(--max);
-  margin:auto;
-  padding:60px 20px 80px;
-}
-
-h1{
-  font-size:42px;
-  margin:0 0 8px;
-  font-weight:600;
-  letter-spacing:-0.5px;
-}
-
-.subtitle{
-  color:var(--muted);
-  font-size:18px;
-  margin-bottom:40px;
-}
-
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:28px;
-  margin-bottom:20px;
-}
-
-.section-title{
-  font-weight:600;
-  margin-bottom:10px;
-}
-
-.icons{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-  margin-top:10px;
-}
-
-.icon-box{
-  border:1px solid var(--line);
-  border-radius:10px;
-  padding:16px;
-  font-size:14px;
-  color:var(--muted);
-}
-
-.contact{
-  font-size:16px;
-}
-
-a{
-  color:var(--accent);
-  text-decoration:none;
-  font-weight:500;
-}
-
-footer{
-  margin-top:50px;
-  font-size:13px;
-  color:var(--muted);
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:10px;
-  border-top:1px solid var(--line);
-  padding-top:20px;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Fabian baut den Snackungsdienst auf. Fried Chicken, erste Kochversuche und der Weg zum eigenen Foodtruck. Begleite die Vorbereitung.">
+  <meta name="theme-color" content="#ffce32">
+  <title>Snackungsdienst – der Snackungswagen entsteht</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div class="wrapper">
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+  <div class="signal-stripe" aria-hidden="true"></div>
+  <header class="header">
+    <a class="brand" href="#start" aria-label="Snackungsdienst – zur Startseite">
+      <img src="assets/logo.png" alt="" width="76" height="76">
+      <span>SNACKUNGS<span class="red">DIENST</span><small>GROSSE PLÄNE. GUTER HUNGER.</small></span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#idee">Die Idee</a>
+      <a href="#einblicke">Einblicke</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="nav-instagram" href="https://www.instagram.com/snackungsdienst/" target="_blank" rel="noopener noreferrer"><img class="instagram-icon" src="assets/instagram-black.svg" alt="" width="24" height="24"> Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (öffnet einen neuen Tab)</span></a>
+    </nav>
+  </header>
 
-<h1>Snackungswagen</h1>
-<div class="subtitle">
-Streetfood Projekt im Aufbau.<br>
-Demnächst in … lass dich überraschen.
-</div>
+  <main id="inhalt">
+    <section class="hero section-shell" id="start" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="status"><span class="status-dot" aria-hidden="true"></span> EINSATZVORBEREITUNG LÄUFT</p>
+        <h1 id="hero-title">Hunger?<br>Wir arbeiten<br>an der <span class="red">Rettung.</span></h1>
+        <p class="hero-intro">Ich bin Fabian. Jetzt bringe ich den <strong>Snackungsdienst</strong> auf den Weg: mit einem eigenen Konzept, vielen Kochversuchen und dem Ziel, meinen Foodtruck aufzubauen.</p>
+        <p class="food-direction">Die Richtung: Fried Chicken, Burger &amp; Pommes.</p>
+        <div class="actions">
+          <a class="button button-red" href="#einblicke">Erste Einblicke <span aria-hidden="true">↓</span></a>
+          <a class="button button-outline" href="https://www.instagram.com/snackungsdienst/" target="_blank" rel="noopener noreferrer"><img class="instagram-icon" src="assets/instagram-black.svg" alt="" width="24" height="24"> Zum Instagram-Profil <span aria-hidden="true">↗</span><span class="sr-only"> (öffnet einen neuen Tab)</span></a>
+        </div>
+        <p class="honest-note">Noch kein Verkauf. Noch kein Starttermin. Aber schon eine Menge vor.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-backdrop" aria-hidden="true"></div>
+        <img class="hero-photo" src="assets/testkueche-tablett.jpg" width="1000" height="1250" alt="Ein erster Kochversuch: Chicken Fingers, zwei Burger und Pommes auf einem Metalltablett." fetchpriority="high">
+        <div class="photo-tag"><span class="tag-dot" aria-hidden="true"></span> AUS MEINER TESTKÜCHE</div>
+        <span class="image-number" aria-hidden="true">EINBLICK / 01</span>
+      </div>
+    </section>
 
-<div class="card">
-  <div class="section-title">Status</div>
-  <div class="icons">
-    <div class="icon-box">🔧 Konzept & Entwicklung</div>
-    <div class="icon-box">🤝 Kooperationen & Lieferanten</div>
-    <div class="icon-box">📍 Events & Standorte in Planung</div>
-    <div class="icon-box">📦 Struktur & Vorbereitung</div>
-  </div>
-</div>
+    <div class="progress-band"><p>Das Konzept steht. <strong>Jetzt geht’s an die nächsten Schritte.</strong></p></div>
 
-<div class="card contact">
-  <div class="section-title">Kontakt</div>
-  Bei Interesse an Kooperationen, Lieferantenanfragen oder Event-Anfragen:<br><br>
-  <a href="mailto:info@snackungsdienst.de">info@snackungsdienst.de</a>
-</div>
+    <section class="idea section-shell" id="idee" aria-labelledby="idee-title">
+      <div class="idea-heading">
+        <p class="eyebrow"><span>01</span> DIE IDEE DAHINTER</p>
+        <h2 id="idee-title">Ein neuer Einsatz.<br><span class="red">Mein eigenes Ding.</span></h2>
+        <blockquote class="founder-quote"><p>„Ich möchte einen Foodtruck aufbauen. Einen, hinter dem meine eigenen Ideen und viele Versuche in der Küche stehen. Hier nehme ich dich mit auf dem Weg dahin.“</p><footer class="signature"><span class="signature-line" aria-hidden="true"></span> Fabian <small>Der Kopf hinter dem Snackungsdienst</small></footer></blockquote>
+      </div>
+      <div class="mission-grid">
+        <article class="mission-card"><span class="card-number">01 / DIE MARKE</span><h3>Snackungsdienst.</h3><p>Unter diesem Namen wächst das Projekt. Mit einer Portion Humor und der Idee, später gegen Hunger anzutreten.</p></article>
+        <article class="mission-card"><span class="card-number">02 / DER WAGEN</span><h3>Snackungswagen.</h3><p>So wird mein Foodtruck heißen. Bis er losrollen kann, gibt es noch einiges zu planen und vorzubereiten.</p></article>
+        <article class="mission-card"><span class="card-number">03 / DER ANFANG</span><h3>Rezepte weiterentwickeln.</h3><p>Viele Kochversuche und ein eigenes Konzept sind die Grundlage. An den Rezepten und der späteren Karte arbeite ich weiter.</p></article>
+      </div>
+    </section>
 
-<footer>
-  <div>© 2026 Snackungswagen</div>
-  <div>
-    <a href="#impressum">Impressum</a> ·
-    <a href="#datenschutz">Datenschutz</a>
-  </div>
-</footer>
+    <section class="insights" id="einblicke" aria-labelledby="einblicke-title">
+      <div class="section-shell">
+        <div class="section-heading"><div><p class="eyebrow"><span>02</span> EINBLICKE AUS DER KÜCHE</p><h2 id="einblicke-title">So fängt’s an.</h2></div><p>Eigene Kochversuche. Erste Ideen.<br>Und noch einiges auf dem Zettel.</p></div>
+        <div class="insight-grid">
+          <figure class="food-card"><div class="food-card-image burger-focus"><img src="assets/testkueche-burger.jpg" alt="Nahaufnahme eines Chicken-Burgers aus meinen Kochversuchen: Bun, panierte Füllung, Sauce und Gurke." width="1000" height="1250" loading="lazy"><span class="image-label">ERSTE KOCHVERSUCHE</span></div><figcaption><span class="eyebrow">AUSPROBIERT</span><h3>Von der Idee auf den Teller.</h3><p>Ein Burger aus meinen ersten Versuchen. Hier wird getestet, bevor eine fertige Karte daraus wird.</p></figcaption></figure>
+          <article class="journal-card">
+            <div class="journal-top"><span class="eyebrow">STAND DER DINGE</span><span class="journal-dot" aria-hidden="true"></span></div>
+            <h3>Die Küche ist<br>der Anfang.</h3>
+            <p>Viele Kochversuche, Rezeptentwicklung und ein eigenes Konzept: Darauf baue ich jetzt auf. Küchen und Hygienekurse habe ich angefragt. Für den Trailer kläre ich gerade, welche Ausstattung ich brauche.</p>
+            <div class="journal-divider"></div>
+            <p class="eyebrow">WAS ALS NÄCHSTES ANSTEHT</p>
+            <ul class="next-steps"><li>Hygienekurse absolvieren</li><li>Ein Angebot für den Foodtrailer einholen</li><li>Eine Testküche anmieten</li></ul>
+            <div class="journal-bottom"><img src="assets/logo.png" alt="Gezeichneter Snackungswagen mit angehobenen Vorderrädern, silbernem Besteck und Blaulicht." width="154" height="154" loading="lazy"><p>Der Snackungswagen<br><strong>entsteht gerade.</strong></p></div>
+          </article>
+        </div>
+        <p class="caption-note">Die Fotos zeigen meine Kochversuche – die spätere Speisekarte steht noch nicht fest.</p>
+      </div>
+    </section>
 
-<div class="card" id="impressum" style="margin-top:40px;">
-  <div class="section-title">Impressum</div>
-  Angaben gemäß § 5 TMG<br><br>
-  NAME: Fabian Pflüger<br>
-  Anschrift Nelkenweg 1<br>
-  E-Mail: info@snackungsdienst.de<br>
-  Telefon: +49 1234 <br><br>
-  (Einzelunternehmen)
-</div>
+    <section class="follow section-shell" id="dranbleiben" aria-labelledby="follow-title">
+      <div class="follow-card">
+        <div><p class="eyebrow">03 / BLEIB DABEI</p><h2 id="follow-title">Der nächste Schritt?<br><span>Du bekommst ihn mit.</span></h2><p>Wenn es etwas Neues gibt, teile ich es hier und auf Instagram. Von der nächsten Runde in der Küche bis zu den Fortschritten beim Aufbau.</p><a class="button button-dark instagram-cta" href="https://www.instagram.com/snackungsdienst/" target="_blank" rel="noopener noreferrer"><img class="instagram-icon" src="assets/instagram-white.svg" alt="" width="32" height="32"><span>Jetzt auf Instagram begleiten<small>@snackungsdienst · Profil öffnen</small></span><span aria-hidden="true">↗</span><span class="sr-only"> (öffnet einen neuen Tab)</span></a></div>
+        <div class="follow-illustration"><img src="assets/logo.png" alt="Der gezeichnete Snackungswagen." width="370" height="370" loading="lazy"><span>SNACKS IN VORBEREITUNG.</span></div>
+      </div>
+    </section>
 
-<div class="card" id="datenschutz">
-  <div class="section-title">Datenschutzerklärung</div>
-  Diese Website verarbeitet keine personenbezogenen Daten außer denen, 
-  die freiwillig per E-Mail übermittelt werden. 
-  Server-Logfiles können technisch bedingt gespeichert werden.
-</div>
-
-</div>
+    <section class="contact-section section-shell" id="kontakt" aria-labelledby="kontakt-title">
+      <div class="berlin-note"><p class="eyebrow">04 / AUSTAUSCH &amp; KONTAKTE</p><h2 id="kontakt-title">Gute Ideen beginnen<br>mit einem Gespräch.</h2><p>Gerade nutze ich meine Zeit in Berlin, um dazuzulernen, Kontakte zu knüpfen und den Snackungswagen vorzubereiten. Wo er später unterwegs sein wird, steht noch nicht fest.</p></div>
+      <div class="contact-card"><h3>Eine Küche, ein Trailer<br>oder ein guter Tipp?</h3><p>Ich freue mich über Austausch, Erfahrungen und Angebote – von Testküchen und Foodtrailern über Lieferanten bis zu Partnerschaften und Eventideen. Auch mit Fragen oder anderen Ideen bist du willkommen.</p><a class="button button-red contact-email" href="mailto:info@snackungsdienst.de"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg> Schreib mir eine E-Mail</a><a class="email-address" href="mailto:info@snackungsdienst.de">info@snackungsdienst.de</a><p class="contact-note">Das Projekt ist im Aufbau. Es gibt noch keinen Verkauf und keine bestätigten Einsatztermine.</p></div>
+    </section>
+  </main>
+  <footer class="footer section-shell"><div><a class="footer-brand" href="#start">SNACKUNGS<span class="red">DIENST</span></a><p>Ein Projekt von Fabian Pflüger – Gastronomieservice.</p></div><nav aria-label="Weitere Informationen"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="https://www.instagram.com/snackungsdienst/" target="_blank" rel="noopener noreferrer">Instagram ↗<span class="sr-only"> (öffnet einen neuen Tab)</span></a></nav></footer>
 </body>
 </html>
